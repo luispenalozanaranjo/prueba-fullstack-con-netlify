@@ -1,13 +1,12 @@
 [build]
   base    = "frontend"
   command = "npm run build"
-  publish = "frontend/.output/public"
+  publish = ".output/public"             # <- sin "frontend/"
 
 [functions]
-  directory    = "netlify/functions"
+  directory    = "../netlify/functions"  # <- si tu carpeta está en la RAÍZ (netlify/functions)
   node_bundler = "esbuild"
 
-# Vars públicas para cada contexto (ajústalas si quieres)
 [context.production.environment]
   NUXT_PUBLIC_API_BASE = "/api"
   NUXT_PUBLIC_LOG_LEVEL = "info"
