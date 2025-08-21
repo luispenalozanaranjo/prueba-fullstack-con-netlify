@@ -1,0 +1,33 @@
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "frontend/.output/public"
+
+[functions]
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+
+[context.production.environment]
+  NUXT_PUBLIC_API_BASE = "https://TU-BACKEND-API.ejemplo.com"
+  NUXT_PUBLIC_BASIC_USER = "appUser"
+  NUXT_PUBLIC_BASIC_PASS = "appPass123"
+  NUXT_PUBLIC_LOG_LEVEL = "info"
+
+[context.deploy-preview.environment]
+  NUXT_PUBLIC_API_BASE = "https://preview-backend.ejemplo.com"
+  NUXT_PUBLIC_BASIC_USER = "appUser"
+  NUXT_PUBLIC_BASIC_PASS = "appPass123"
+  NUXT_PUBLIC_LOG_LEVEL = "debug"
+
+[context.branch-deploy.environment]
+  NUXT_PUBLIC_API_BASE = "https://branch-backend.ejemplo.com"
+  NUXT_PUBLIC_BASIC_USER = "appUser"
+  NUXT_PUBLIC_BASIC_PASS = "appPass123"
+  NUXT_PUBLIC_LOG_LEVEL = "debug"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200

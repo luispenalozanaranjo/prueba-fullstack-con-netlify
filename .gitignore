@@ -1,0 +1,67 @@
+# --- Dependencias / locks ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# --- Entornos / secretos ---
+.env
+.env.*.local
+
+# --- Logs (cualquier paquete) ---
+*.log
+logs/
+**/logs/
+
+# --- Build / caches comunes ---
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+
+# --- Frontend (Nuxt) ---
+frontend/.nuxt/
+frontend/.output/
+frontend/.vercel/
+frontend/.cache/
+
+# --- Backend (Express) ---
+backend-express/src/logs/
+backend-express/logs/
+
+# --- Editores / SO ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- Docker (opcional) ---
+*.pid
+
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Nuxt/Output/Build
+.nuxt/
+.output/
+.netlify/
+dist/
+build/
+
+# Env files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
