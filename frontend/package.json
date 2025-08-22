@@ -14,14 +14,13 @@
   },
   "dependencies": {
     "@oxc-parser/wasm": "0.29.0",
-    "@pinia/nuxt": "^0.11.2",
     "axios": "^1.7.2",
     "nuxt": "^3.12.0",
     "pinia": "^2.3.1",
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "@pinia/nuxt": "^0.5.5"
   },
   "devDependencies": {
-    "@pinia/nuxt": "^0.5.5",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
