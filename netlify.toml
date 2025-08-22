@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
   command = "npm run build"
-  publish = ".output/public"   # <- sin 'frontend/' porque ya lo marca base
+  publish = "frontend/.output/public"   # <- sin 'frontend/' porque ya lo marca base
 
 [functions]
   node_bundler = "esbuild"
@@ -13,5 +13,5 @@
   status = 200
 
 [build.environment]
-  NODE_VERSION = "18.20.3"
   OXC_PARSER_BACKEND = "wasm"
+  NODE_VERSION = "18.20.3"
