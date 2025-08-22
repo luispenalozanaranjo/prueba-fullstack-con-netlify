@@ -1,11 +1,11 @@
 [build]
   base    = "frontend"
   command = "npm run build"
-  publish = ".output/public"             # <- sin "frontend/"
+  publish = "frontend/.output/public"             # <- sin "frontend/"
 
 [functions]
-  directory    = "../netlify/functions"  # <- si tu carpeta está en la RAÍZ (netlify/functions)
   node_bundler = "esbuild"
+  directory    = "netlify/functions"  # <- si tu carpeta está en la RAÍZ (netlify/functions)
 
 [context.production.environment]
   NUXT_PUBLIC_API_BASE = "/api"
@@ -23,3 +23,7 @@
   from = "/api/*"
   to   = "/.netlify/functions/api/:splat"
   status = 200
+
+[build.environment]
+  NODE_VERSION = "18.20.3"
+  OXC_PARSER_BACKEND = "wasm"
