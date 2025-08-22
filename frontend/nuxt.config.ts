@@ -13,6 +13,6 @@ export default defineNuxtConfig({
     plugins: [
     { src: '~/plugins/log.client', mode: 'client' },
     { src: '~/plugins/api.client', mode: 'client' },
-    { src: '~/plugins/log', mode: 'client' }
+    { src: '~/plugins/log.client', mode: 'client' }
   ],
 });
