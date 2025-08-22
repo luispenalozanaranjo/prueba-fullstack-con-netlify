@@ -17,6 +17,9 @@
   "engines": {
     "node": ">=18"
   },
+  "overrides": {
+    "unimport": "3.10.0"
+  },
   "scripts": {
     "build": "echo 'Building root (frontend is built via netlify.toml base)'",
     "postinstall": "npm --prefix frontend ci || npm --prefix frontend install"
