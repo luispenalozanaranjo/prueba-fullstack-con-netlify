@@ -17,4 +17,14 @@ export default defineNuxtConfig({
     { src: '~/plugins/api.client', mode: 'client' },
     { src: '~/plugins/log.client', mode: 'client' }
   ],
+  vite: {
+    build: {
+      rollupOptions: {
+        external: [
+          '@oxc-parser/binding-linux-x64-gnu',
+          './parser.linux-x64-gnu.node'
+        ]
+      }
+    }
+  }
 });
