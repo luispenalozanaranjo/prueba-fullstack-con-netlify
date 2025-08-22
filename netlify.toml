@@ -1,11 +1,10 @@
 [build]
-  base    = "frontend"
+  base = "frontend"
   command = "npm run build"
-  publish = ".output/public"             # <- sin "frontend/"
+  publish = "frontend/.output/public"
 
 [functions]
   node_bundler = "esbuild"
-  directory    = "netlify/functions"  # <- si tu carpeta está en la RAÍZ (netlify/functions)
 
 [context.production.environment]
   NUXT_PUBLIC_API_BASE = "/api"
@@ -19,10 +18,11 @@
   NUXT_PUBLIC_API_BASE = "/api"
   NUXT_PUBLIC_LOG_LEVEL = "debug"
 
-[[redirects]]
-  from = "/api/*"
-  to   = "/.netlify/functions/api/:splat"
-  status = 200
+[redirects]
+  [[redirects]]
+    from = "/api/*"
+    to = "/.netlify/functions/api/:splat"
+    status = 200
 
 [build.environment]
   NODE_VERSION = "18.20.3"
