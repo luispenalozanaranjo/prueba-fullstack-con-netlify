@@ -1,7 +1,7 @@
 [build]
   base    = "frontend"
   command = "npm run build"
-  publish = "frontend/.output/public"             # <- sin "frontend/"
+  publish = ".output/public"             # <- sin "frontend/"
 
 [functions]
   node_bundler = "esbuild"
