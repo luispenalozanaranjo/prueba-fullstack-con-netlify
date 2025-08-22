@@ -15,7 +15,5 @@
 [build.environment]
   OXC_PARSER_BACKEND = "wasm"
   NODE_VERSION = "18.20.3"
-
-[build.environment]
   NPM_FLAGS = "--legacy-peer-deps"
   NODE_ENV = "development"
