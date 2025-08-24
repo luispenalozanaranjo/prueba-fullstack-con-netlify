@@ -1,6 +1,8 @@
 [build]
   base = "frontend"
-  command = "npm ci && npm rebuild oxc-parser --update-binary || true && npx nuxi generate"
+  # Forzamos rebuild del binding de oxc-parser antes del build
+  command = "npm ci && npm rebuild oxc-parser --update-binary || true && npm run build"
+  # Con base=frontend, la ruta de publish debe ser relativa a esa carpeta
   publish = ".output/public"
 
 [functions]
@@ -13,8 +15,17 @@
   status = 200
 
 [build.environment]
+  # Usa backend WASM para evitar depender del binario nativo si está disponible
   OXC_PARSER_BACKEND = "wasm"
+
+  # Fijamos Node LTS (coincide con la imagen noble de Netlify)
   NODE_VERSION = "20"
+
+  # Asegura que npm NO omita dependencias opcionales
   NPM_CONFIG_OPTIONAL = "true"
+
+  # Mantengo tu flag; no omite opcionales
   NPM_FLAGS = "--include=optional"
+
+  # Builds de producción (optimiza el output)
   NODE_ENV = "production"
