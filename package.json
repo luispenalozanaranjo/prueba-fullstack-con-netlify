@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build": "echo 'Building root (frontend is built via netlify.toml base)'",
-    "postinstall": "npm --prefix frontend ci || npm --prefix frontend install"
+    "postinstall": "npm --prefix frontend ci || npm --prefix frontend install",
+    "generate": "nuxt generate"
   }
 }

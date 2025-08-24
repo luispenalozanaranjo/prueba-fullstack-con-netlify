@@ -10,7 +10,8 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@oxc-parser/wasm": "^0.29.0",

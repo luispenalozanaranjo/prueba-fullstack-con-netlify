@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
   # Forzamos rebuild del binding de oxc-parser antes del build
-  command = "npm ci && npm rebuild oxc-parser --update-binary || true && npm run build"
+  command = "npm ci && npm rebuild oxc-parser --update-binary || true && npm run build && npm run generate"
   # Con base=frontend, la ruta de publish debe ser relativa a esa carpeta
   publish = ".output/public"
 
