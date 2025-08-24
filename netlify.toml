@@ -1,8 +1,7 @@
 [build]
   base = "frontend"
-  # Asegura deps limpias y permite que falle solo el rebuild de oxc-parser
   command = "npm ci && (npm rebuild oxc-parser --update-binary || true) && npm run build"
-  # ⚠️ No definas publish: lo gestiona el plugin/adapter
+  publish = ".next"   # <-- fuerza la salida correcta para Next.js
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
