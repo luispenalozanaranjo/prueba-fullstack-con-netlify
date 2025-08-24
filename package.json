@@ -13,13 +13,17 @@
     "rotating-file-stream": "^3.2.6",
     "serverless-http": "^3.2.0",
     "zod": "^4.0.17",
-    "@oxc-parser/binding-linux-x64-gnu": "^0.82.3"
+    "@oxc-parser/binding-linux-x64-gnu": "^0.82.3",
+    "@rollup/rollup-linux-x64-gnu": "^3.0.0"
   },
   "engines": {
     "node": ">=18"
   },
   "overrides": {
     "unimport": "3.10.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.0.0"
   },
   "scripts": {
     "build": "echo 'Building root (frontend is built via netlify.toml base)'",

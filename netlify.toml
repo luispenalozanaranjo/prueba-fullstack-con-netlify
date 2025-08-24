@@ -25,7 +25,7 @@
   NPM_CONFIG_OPTIONAL = "true"
 
   # Mantengo tu flag; no omite opcionales
-  NPM_FLAGS = "--legacy-peer-deps"
+  NPM_FLAGS = "--include=optional"
 
   # Builds de producción (optimiza el output)
   NODE_ENV = "production"
